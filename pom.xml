@@ -15,5 +15,6 @@
 	<modules>
 		<module>microservices-common</module>
 		<module>microservices-provider-dept-8001</module>
+		<module>microservices-consumer-dept-801</module>
 	</modules>
 </project>
