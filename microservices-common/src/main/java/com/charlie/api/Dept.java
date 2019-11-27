@@ -22,16 +22,16 @@ public class Dept implements Serializable{
 	
 	private String dname;
 	
-	private String db_source;
+	private String dbSource;
 
 	public Dept() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Dept(Long id, String dname, String db_source) {
+	public Dept(Long id, String dname, String dbSource) {
 		this.id = id;
 		this.dname = dname;
-		this.db_source = db_source;
+		this.dbSource = dbSource;
 	}
 
 	public Long getId() {
@@ -51,11 +51,11 @@ public class Dept implements Serializable{
 	}
 
 	public String getDb_source() {
-		return db_source;
+		return dbSource;
 	}
 
-	public void setDb_source(String db_source) {
-		this.db_source = db_source;
+	public void setDb_source(String dbSource) {
+		this.dbSource = dbSource;
 	}
 	
 }
