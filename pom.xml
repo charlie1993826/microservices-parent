@@ -12,9 +12,24 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.6.RELEASE</version>
 	</parent>
+	
+	<!--依赖管理，用于管理spring-cloud的依赖，其中Finchley.RELEASE是版本号 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Finchley.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
 	<modules>
 		<module>microservices-common</module>
 		<module>microservices-provider-dept-8001</module>
 		<module>microservices-consumer-dept-801</module>
+		<module>microservices-eureka-7001</module>
 	</modules>
 </project>
