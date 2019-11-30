@@ -1,6 +1,8 @@
 server: 
   port: 7001
 
+spring:  application:    name: eureka7001
+
 eureka:
   instance: 
     hostname: localhost #服务注册中心IP地址

@@ -22,6 +22,9 @@ public class DeptServiceImpl implements DeptService {
 		return false;
 	}
 
+	/**
+	 * 根据ID查询数据
+	 */
 	@Override
 	public Dept getDept(Long id) {
 		// TODO Auto-generated method stub
