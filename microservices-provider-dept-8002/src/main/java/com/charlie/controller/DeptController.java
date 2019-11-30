@@ -7,30 +7,26 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 import com.charlie.api.Dept;
+import com.charlie.service.DeptService;
 
 @RestController
-@RequestMapping("/consumer")
-public class DeptController_Consumer {
-	
-	//private static final String URL = "http://localhost:8001/provider/";
-	private static final String URL = "http://microservices-dept/provider/";
+@RequestMapping("/provider")
+public class DeptController {
 
 	@Autowired
-	private RestTemplate restTemlate;
+	private DeptService service;
 	
 	@RequestMapping(value = "/find/dept/{id}", method = RequestMethod.GET)
 	public Dept getDeptById(@PathVariable("id") long id) {
 		
-		return this.restTemlate.getForObject(URL + "find/dept/" + id, Dept.class);
+		return this.service.getDept(id);  
 	}
 	
-	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/find/dept/list", method = RequestMethod.GET)
-	public List<Dept> getDeptList() {
+	public List<Dept> list(){
 		
-		return this.restTemlate.getForObject(URL + "find/dept/list", List.class);
+		return this.service.list();
 	}
 }
