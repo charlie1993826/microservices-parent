@@ -6,13 +6,13 @@
 	<artifactId>microservices-parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.6.RELEASE</version>
 	</parent>
-	
+
 	<!--依赖管理，用于管理spring-cloud的依赖，其中Finchley.RELEASE是版本号 -->
 	<dependencyManagement>
 		<dependencies>
@@ -25,7 +25,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<build>
 		<finalName>microservices-parent</finalName>
 		<resources>
@@ -46,7 +46,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<modules>
 		<module>microservices-common</module>
 		<module>microservices-provider-dept-8001</module>
@@ -56,5 +56,6 @@
 		<module>microservices-eureka-7003</module>
 		<module>microservices-provider-dept-8002</module>
 		<module>microservices-provider-dept-8003</module>
+		<module>microservices-consumer-dept-feign-9001</module>
 	</modules>
 </project>
