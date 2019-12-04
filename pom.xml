@@ -57,5 +57,6 @@
 		<module>microservices-provider-dept-8002</module>
 		<module>microservices-provider-dept-8003</module>
 		<module>microservices-consumer-dept-feign-9001</module>
+		<module>microservices-provider-dept-hystrix-8005</module>
 	</modules>
 </project>

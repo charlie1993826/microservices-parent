@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.charlie.api.Dept;
 
-@FeignClient(value = "microservices-dept")
+//@FeignClient(value = "microservices-dept")
+@FeignClient(value = "microservices-dept", fallbackFactory = DeptClientServiceFallbackFactory.class)
 public interface DeptFeignService {
 
 	@RequestMapping(value = "/provider/find/dept/{id}", method = RequestMethod.GET)

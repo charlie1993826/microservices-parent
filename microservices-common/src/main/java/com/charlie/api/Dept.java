@@ -10,7 +10,6 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @NoArgsConstructor
 @Accessors(chain = true)
-@Data
 public class Dept implements Serializable{
 
 	/**
